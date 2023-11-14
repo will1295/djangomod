@@ -1,0 +1,24 @@
+{% extends "base_template.html"%}
+
+{%block title%}Agregar proveedor{% endblock%}
+{% block body%}
+
+<form action="" method="post">
+    {%csrf_token%}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre proveedor: </label>
+      {{form.nombre}}
+         </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Telefono</label>
+      {{form.telefono}}
+      </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Persona a cargo</label>
+        {{form.persona_a_cargo}}
+         </div>
+
+    <input type="submit" class="btn btn-primary" value="Ingresar datos">
+  </form>
+
+{% endblock%}
